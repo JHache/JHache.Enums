@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>Latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup Condition="$(Configuration) == DEBUG">
+    <PackageReference Include="Roslynator.Analyzers" Version="2.2.0" />
+    <PackageReference Include="SonarAnalyzer.CSharp" Version="8.1.0.13383" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
+    <PackageReference Include="xunit.analyzers" Version="0.10.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="1.2.0" />
+    <PackageReference Include="FluentAssertions" Version="5.10.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Source\JHache.Enums\JHache.Enums.csproj" />
+    <ProjectReference Include="..\JHache.Enums.Tests.Core\JHache.Enums.Tests.Core.csproj" />
+  </ItemGroup>
+
+</Project>
